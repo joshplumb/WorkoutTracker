@@ -1,0 +1,56 @@
+﻿@using WorkoutTracker.DataAccess.Models;
+@model WorkoutTrackerViewModel
+
+@{
+    ViewData["Title"] = "Enter Your Workout";
+}
+
+<h1>Workout Tracker</h1>
+<h4>Fill in the details of your workout below</h4>
+
+
+<div>
+    <form method="post" action="Submit">
+        <div class="mb-3">
+            <label for="ExerciseName" class="form-label">Exercise Name</label>
+            <input type="text" class="form-control" name="exerciseName" placeholder="enter the name of the exercise">
+        </div>
+        <div class="mb-3">
+            <label for="Weight" class="form-label">Enter Weight</label>
+            <input type="number" class="form-control" name="weight" placeholder="enter the weight">
+        </div>
+        <div class="mb-3">
+            <label for="Repetitions" class="form-label">How many repetitions were done?</label>
+            <input type="number" class="form-control" name="reps" placeholder="reps">
+        </div>
+    </form>
+</div>
+
+
+<div>
+    <h1>All Workouts</h1>
+</div>
+<div>
+    <table class="table">
+        <tr>
+            <th>
+                Exercise Name
+            </th>
+            <th>
+                Weight
+            </th>
+            <th>
+                Repetitions
+            </th>
+        </tr>
+        @foreach (WorkoutTrackerModel name in Model.WorkoutList)
+        {
+            <tr>
+                <th>@name.ExerciseName</th>
+                <th>@name.Weight</th>
+                <th>@name.Repetitions</th>
+            </tr>
+        }
+    </table>
+</div>
+

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkoutTracker", "WorkoutTracker\WorkoutTracker.csproj", "{77467CBA-3B8D-4AD1-9C73-92D3033620A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkoutTracker.DataAccess", "WorkoutTracker.DataAccess\WorkoutTracker.DataAccess.csproj", "{BF543C01-AB36-4B35-A652-EC2AACA1CE2A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77467CBA-3B8D-4AD1-9C73-92D3033620A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77467CBA-3B8D-4AD1-9C73-92D3033620A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77467CBA-3B8D-4AD1-9C73-92D3033620A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77467CBA-3B8D-4AD1-9C73-92D3033620A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF543C01-AB36-4B35-A652-EC2AACA1CE2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF543C01-AB36-4B35-A652-EC2AACA1CE2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF543C01-AB36-4B35-A652-EC2AACA1CE2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF543C01-AB36-4B35-A652-EC2AACA1CE2A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7252CA2-173C-4776-BB90-076158C01FF2}
+	EndGlobalSection
+EndGlobal
