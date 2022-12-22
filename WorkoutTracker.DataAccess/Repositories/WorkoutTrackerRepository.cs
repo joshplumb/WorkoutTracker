@@ -27,6 +27,8 @@ namespace WorkoutTracker.DataAccess.Repositories
             existingExercise.ExerciseName = model.ExerciseName;
             existingExercise.Weight = model.Weight;
             existingExercise.Repetitions = model.Repetitions;
+            existingExercise.Intensity = model.Intensity;
+            existingExercise.Notes = model.Notes;
             _context.SaveChanges();
         }
         public void Delete(int workoutId)

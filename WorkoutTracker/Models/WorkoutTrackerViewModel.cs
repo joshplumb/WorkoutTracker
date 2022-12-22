@@ -13,14 +13,15 @@ namespace WorkoutTracker.Models
         public string ActionMessage { get; set; } = "";
         public WorkoutTrackerViewModel(WorkoutTrackerDBContext context)
         {
+            //WorkoutList = new List<WorkoutTrackerModel>();
             _Repo = new WorkoutTrackerRepository(context);
-            WorkoutList = GetAllWorkouts()!;
-            CurrentWorkout = WorkoutList.FirstOrDefault()!;
+            WorkoutList = GetAllWorkouts();
+            CurrentWorkout = WorkoutList.FirstOrDefault();
         }
         public WorkoutTrackerViewModel(WorkoutTrackerDBContext context, int workoutId)
         {
             _Repo = new WorkoutTrackerRepository(context);
-            WorkoutList = GetAllWorkouts()!;
+            WorkoutList = GetAllWorkouts();
             CurrentWorkout = workoutId > 0 ? GetWorkout(workoutId) : new WorkoutTrackerModel();
         }
         public void SaveWorkout(WorkoutTrackerModel model)
@@ -33,20 +34,20 @@ namespace WorkoutTracker.Models
             {
                 model.WorkoutId = _Repo.Create(model);
             }
-            WorkoutList = GetAllWorkouts()!;
+            WorkoutList = GetAllWorkouts();
             CurrentWorkout = GetWorkout(model.WorkoutId);
         }
         public void RemoveWorkout(int workoutId)
         {
             _Repo.Delete(workoutId);
-            WorkoutList = GetAllWorkouts()!;
-            CurrentWorkout = WorkoutList.FirstOrDefault()!;
+            WorkoutList = GetAllWorkouts();
+            CurrentWorkout = WorkoutList.FirstOrDefault();
         }
         public WorkoutTrackerModel GetWorkout(int workoutId)
         {
             return _Repo.GetById(workoutId);
         }
-        public List<WorkoutTrackerModel>? GetAllWorkouts()
+        public List<WorkoutTrackerModel> GetAllWorkouts()
         {
             return _Repo.GetAllExercises();
         }

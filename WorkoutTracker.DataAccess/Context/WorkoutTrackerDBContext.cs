@@ -30,6 +30,8 @@ namespace WorkoutTracker.DataAccess.Context
                     entity.Property(e => e.ExerciseName);
                     entity.Property(e => e.Weight);
                     entity.Property(e => e.Repetitions);
+                    entity.Property(e => e.Intensity);
+                    entity.Property(e => e.Notes).IsRequired(required:false);
                 }
                 );
         }

@@ -1,0 +1,38 @@
+﻿@using WorkoutTracker.DataAccess.Models;
+@model WorkoutTrackerViewModel
+
+<form action="~/WorkoutTracker/Index" method="post">
+    <input type="hidden" name="workoutId" value="@Model.CurrentWorkout.WorkoutId" />
+    <div class="form-control">
+        <h2>Enter Your Workout Below</h2>
+        <div class="form-control">
+            <label for="exerciseName">Exercise</label>
+            <input type="text" name="exerciseName" placeholder="Enter the workout name" value="@Model.CurrentWorkout.ExerciseName" />
+        </div>
+        <div class="form-control">
+            <label for="weight">Weight</label>
+            <input type="number" name="weight" placeholder="Enter the weight" required value="@Model.CurrentWorkout.Weight" />
+        </div>
+        <div class="form-control">
+            <label for="intensity">Rating of Perceived Exertion</label>
+            <input type="number" name="intensity" placeholder="Enter the intensity" required value="@Model.CurrentWorkout.Intensity" />
+        </div>
+        <div class="form-control">
+            <label for="repetitions">Repetitions</label>
+            <input type="number" name="repetitions" placeholder="Enter the number of repetitions completed" required value="@Model.CurrentWorkout.Intensity" />
+        </div>
+        <div class="form-control">
+            <label for="notes">Enter any notes desired</label>
+            <textarea name="notes"
+                      cols="30"
+                      rows="10"
+                      value="@Model.CurrentWorkout.Intensity"
+                      placeholder="Enter your notes here"></textarea>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary" >Save</button>
+            <button class="btn btn-danger" type="submit" asp-controller="WorkoutTracker" asp-action="Delete">Delete</button>
+            <a class="btn btn-info" href="~/WorkoutTracker/Index">Cancel</a>
+        </div>
+    </div>
+</form>

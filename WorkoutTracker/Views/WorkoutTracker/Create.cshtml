@@ -1,0 +1,33 @@
+﻿@using WorkoutTracker.DataAccess.Models;
+
+<form method="post" action="Index">
+    <div class="form-control">
+        <h2>Enter Your Workout Below</h2>
+        <div class="form-control">
+            <label for="ExerciseName">Exercise</label>
+            <input type="text" name="ExerciseName" placeholder="Enter the workout name" />
+        </div>
+        <div class="form-control">
+            <label for="Weight">Weight</label>
+            <input type="number" name="Weight" placeholder="Enter the weight" required />
+        </div>
+        <div class="form-control">
+            <label for="Intensity">Rating of Perceived Exertion</label>
+            <input type="number" name="Intensity" placeholder="Enter the intensity" required />
+        </div>
+        <div class="form-control">
+            <label for="Repetitions">Repetitions</label>
+            <input type="number" name="Repetitions" placeholder="Enter the number of repetitions completed" required />
+        </div>
+        <div class="form-control">
+            <label for="Notes">Enter any notes desired</label>
+            <textarea name="Notes"
+                      cols="30"
+                      rows="10"
+                      placeholder="Enter your notes here"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Submit" class="btn btn-primary" />
+        </div>
+    </div>
+</form>
